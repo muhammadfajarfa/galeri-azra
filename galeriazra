@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Girlfriend Day</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Comic Sans MS', cursive;
+    }
+    body, html {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .page {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .page.active {
+      display: flex;
+    }
+    .card {
+      background: rgba(255,255,255,0.85);
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+    input, button {
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+    img.foto {
+      width: 90%;
+      max-width: 300px;
+      height: auto;
+      border: 5px solid #f8b9d4;
+      border-radius: 20px;
+      margin: 20px 0;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 150px;
+      height: auto;
+      border: 5px solid #f8b9d4;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .surat {
+      background: rgba(255,255,255,0.95);
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 90%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .love-button {
+      background: pink;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      cursor: pointer;
+      border: 2px solid #fff;
+      box-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
+      margin-top: 20px;
+    }
+    @media (max-width: 600px) {
+      .card, .surat {
+        padding: 15px;
+        font-size: 16px;
+      }
+      .love-button {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Login Page -->
+<div class="page active" id="page1" style="background-image: url('img/baground.JPG');">
+  <div class="card">
+    <h2>🔒 Masukkan Username dan PIN</h2>
+    <input type="text" id="username" placeholder="Username" /><br />
+    <input type="password" id="pin" placeholder="PIN" /><br />
+    <button onclick="checkLogin()">Masuk</button>
+  </div>
+</div>
+
+<!-- Pages 2 to 10 -->
+<div class="page" id="page2" style="background-image: url('img/bg3.jpg');">
+  <img src="img/hal1.jpg" class="foto" />
+  <audio id="audio2" src="img/hal1.mp3"></audio>
+</div>
+
+<div class="page" id="page3" style="background-image: url('img/bg3.jpg');">
+  <div class="gallery">
+    <img src="img/hal2.1.jpg" />
+    <img src="img/hal2.2.jpg" />
+    <img src="img/hal2.jpg" />
+  </div>
+  <audio id="audio3" src="img/hal2.mp3"></audio>
+</div>
+
+<div class="page" id="page4" style="background-image: url('img/bg3.jpg');">
+  <div class="gallery">
+    <img src="img/hal3.1.jpg" />
+    <img src="img/hal3.2.jpg" />
+    <img src="img/hal3.jpg" />
+  </div>
+  <audio id="audio4" src="img/hal3.mp3"></audio>
+</div>
+
+<div class="page" id="page5" style="background-image: url('img/bg2.jpg');">
+  <div class="gallery">
+    <img src="img/hal4.1.jpg" />
+    <img src="img/hal4.jpg" />
+  </div>
+  <audio id="audio5" src="img/hal4.mp3"></audio>
+</div>
+
+<div class="page" id="page6" style="background-image: url('img/bg3.jpg');">
+  <img src="img/hal5.jpg" class="foto" />
+  <audio id="audio6" src="img/hal5.mp3"></audio>
+</div>
+
+<div class="page" id="page7" style="background-image: url('img/bg3.jpg');">
+  <div class="gallery">
+    <img src="img/hal6.1.jpg" />
+    <img src="img/hal6.2.jpg" />
+    <img src="img/hal6.3.jpg" />
+    <img src="img/hal6.jpg" />
+  </div>
+  <audio id="audio7" src="img/hal6.mp3"></audio>
+</div>
+
+<div class="page" id="page8" style="background-image: url('img/bg3.jpg');">
+  <div class="gallery">
+    <img src="img/hal7.1.jpg" />
+    <img src="img/hal7.2.jpg" />
+    <img src="img/hal7.3.jpg" />
+    <img src="img/hal7.jpg" />
+  </div>
+  <audio id="audio8" src="img/hal7.mp3"></audio>
+</div>
+
+<div class="page" id="page9" style="background-image: url('img/bg3.jpg');">
+  <div class="gallery">
+    <img src="img/hal8.1.jpg">
+    <img src="img/hal8.3.jpg" />
+    <img src="img/hal8.jpg" />
+  </div>
+  <audio id="audio9" src="img/hal8.mp3"></audio>
+</div>
+
+<div class="page" id="page10" style="background-image: url('img/bg3.jpg');">
+  <div class="gallery">
+    <img src="img/hal9.1.jpg" />
+    <img src="img/hal9.2.jpg" />
+    <img src="img/hal9.3.png" />
+    <img src="img/hal9.png" />
+  </div>
+  <audio id="audio10" src="img/hal9.mp3"></audio>
+</div>
+
+<!-- Page 11 -->
+<div class="page" id="page11" style="background-color: #fff0f5;">
+  <div class="surat">
+    <h2>💌 Surat Untukmu</h2>
+    <p>Citra selalu spesial, dan hari ini azam mau bilang... terima kasih sudah ada di hidupnyaa azam sayang. 💖</p>
+    <div class="love-button" onclick="bukaHadiah()">❤️</div>
+    <div id="hadiah" style="display:none; margin-top:20px;">
+      <img src="img/last.jpg" style="max-width: 80%; height: auto;" />
+    </div>
+  </div>
+</div>
+
+<script>
+  function checkLogin() {
+    const user = document.getElementById('username').value;
+    const pin = document.getElementById('pin').value;
+    if(user === 'azra' && pin === 'gfday') {
+      nextPage(2);
+      const audio = document.getElementById('audio2');
+      audio.play().catch(() => {});
+      playAudio(2);
+    } else {
+      alert('Username atau PIN salah!');
+    }
+  }
+
+  function nextPage(pageNum) {
+    for (let i = 1; i <= 11; i++) {
+      const page = document.getElementById(`page${i}`);
+      if (page) page.classList.remove('active');
+    }
+    document.getElementById(`page${pageNum}`).classList.add('active');
+  }
+
+  function playAudio(index) {
+    const audio = document.getElementById(`audio${index}`);
+    if (!audio) return;
+    audio.play().catch(() => {});
+    audio.onended = () => {
+      if(index < 10) {
+        nextPage(index + 1);
+        playAudio(index + 1);
+      } else {
+        nextPage(11);
+      }
+    }
+  }
+
+  function bukaHadiah() {
+    document.getElementById('hadiah').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
